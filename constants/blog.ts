@@ -49,7 +49,7 @@ export const BLOG_POSTS: BlogPost[] = [
     content: "Next.js is a framework that make it easy to build full-stack application. It provides file-based routing, server components, and more.",
     category: ["tech", "nextjs"],
     date: "February 7, 2026",
-    author: "Rigel Recurerdo" 
+    author: "Rigel Recurerdo"
   },
   {
     id: "2",
@@ -80,5 +80,25 @@ export const BLOG_POSTS: BlogPost[] = [
     category: ["life"],
     date: "February 7, 2026",
     author: "Rey Inoc"
+  },
+  {
+    id: "5",
+    slug: "tailwindcss-tips-and-tricks",
+    title: "TailwindCSS Tips and Tricks",
+    overview: "Handy TailwindCSS techniques to speed up your styling workflow.",
+    content: "TailwindCSS is a utility-first CSS framework that lets you build designs directly in your markup. Learning a few key tricks like using arbitrary values, custom plugins, and the cn() utility can drastically improve your productivity.",
+    category: ["tech", "css"],
+    date: "March 10, 2026",
+    author: "Rigel Recurerdo"
+  },
+  {
+    id: "6",
+    slug: "dealing-with-burnout",
+    title: "Dealing with Burnout as a Developer",
+    overview: "How to recognize burnout early and recover from it effectively.",
+    content: "Burnout is a common struggle in the tech industry. Recognizing the signs early — like loss of motivation, fatigue, and reduced productivity — is the first step. Taking intentional breaks, setting boundaries, and finding hobbies outside of coding can go a long way in recovery.",
+    category: ["life"],
+    date: "March 15, 2026",
+    author: "Angela Canas"
   }
 ]
