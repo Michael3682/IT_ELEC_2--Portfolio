@@ -4,10 +4,10 @@ import BlogsCard from "@/components/features/BlogsCard"
 
 export default function RecentBlogs() {
     return (
-        <section className="pt-30 space-y-10">
+        <section className="pt-15 space-y-10">
             <div className="flex flex-col gap-3">
-                <h1 className="text-4xl font-bold text-center">Recent Blogs</h1>
-                <p className="text-center">Thoughts and things I've been writing about.</p>
+                <h1 className="text-4xl font-bold text-center text-primary">Recent Blogs</h1>
+                <p className="text-center text-primary">Thoughts and things I've been writing about.</p>
             </div>
             <div className="flex flex-col gap-7">
                 <BlogsCard limit={3} />

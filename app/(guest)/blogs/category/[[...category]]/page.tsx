@@ -29,14 +29,14 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ c
                 <ArrowLeft className="text-muted-foreground" size={20} />
                 Back to blogs
             </Link>
-            <div className="mb-4">
+            <div className="mb-4 text-primary">
                 <h2 className="text-3xl font-bold">Category: {category}</h2>
                 <p>{filteredPost.length} {filteredPost.length > 1 ? "posts" : "post"} in this category</p>
             </div>
             <div className="flex items-center gap-4 mb-4">
                 {BLOG_CATEGORIES.map((category) => (
                     <Link key={category.name} href={`/blogs/category/${category.slug}`}>
-                        <Button className="cursor-pointer" variant="outline">
+                        <Button className="cursor-pointer text-primary" variant="outline">
                             {category.name}
                         </Button>
                     </Link>
@@ -47,7 +47,7 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ c
                     BLOG_POSTS.map((post) => (
                         <Link key={post.id} href={`/blogs/${post.slug}`}>
                             <div className="border border-muted rounded-md p-5 hover:border-muted-foreground transition">
-                                <h2 className="text-lg font-semibold">{post.title}</h2>
+                                <h2 className="text-lg font-semibold text-primary">{post.title}</h2>
                                 <p className="text-muted-foreground mt-1">{post.overview}</p>
                                 <p className="text-sm text-muted-foreground font-light mt-2">{post.date} • {post.author}</p>
                             </div>
@@ -57,7 +57,7 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ c
                     filteredPost.map((post) => (
                         <Link key={post.id} href={`/blogs/${post.slug}`}>
                             <div className="border border-muted rounded-md p-5 hover:border-muted-foreground transition">
-                                <h2 className="text-lg font-semibold">{post.title}</h2>
+                                <h2 className="text-lg font-semibold text-primary">{post.title}</h2>
                                 <p className="text-muted-foreground mt-1">{post.overview}</p>
                                 <p className="text-sm text-muted-foreground font-light mt-2">{post.date} • {post.author}</p>
                             </div>

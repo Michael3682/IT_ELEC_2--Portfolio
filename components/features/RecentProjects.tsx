@@ -4,10 +4,10 @@ import ProjectsCard from "@/components/features/ProjectsCard"
 
 export default function RecentProjects() {
     return (
-        <section className="pt-30 space-y-10">
+        <section className="pt-15 space-y-10">
             <div className="flex flex-col gap-3">
-                <h1 className="text-4xl font-bold text-center">Recent Projects</h1>
-                <p className="text-center">A selection of things I've built recently.</p>
+                <h1 className="text-4xl font-bold text-center text-primary">Recent Projects</h1>
+                <p className="text-center text-primary">A selection of things I've built recently.</p>
             </div>
             <div className="flex justify-between">
                 <ProjectsCard limit={3} variant="smallCard" />

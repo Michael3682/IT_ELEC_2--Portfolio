@@ -3,15 +3,18 @@ import { Facebook, Github, Twitter, Instagram } from "lucide-react"
 
 export default function Footer() {
     return (
-        <footer>
-            <div className="flex justify-between py-5 mx-auto container">
+        <footer className="bg-muted">
+            <div className="flex justify-between py-5 mx-auto container text-primary">
                 <div className="space-y-2">
-                    <h2 className="text-lg font-bold">Portfolio</h2>
-                    <p className="text-base">Frontend Developer</p>
+                    <h2 className="text-lg font-bold">Michael Josh Maranga</h2>
+                    <div className="flex flex-col gap-2">
+                        <p>Web Developer</p>
+                        <p>Cebu, Philippines</p>
+                    </div>
                 </div>
                 <div className="space-y-2">
                     <h2 className="text-lg font-bold">Quick Link</h2>
-                    <ul className="flex flex-col gap-4">
+                    <ul className="flex flex-col gap-2">
                         <li>
                             <Link href="/">Home</Link>
                         </li>
@@ -28,7 +31,7 @@ export default function Footer() {
                 </div>
                 <div className="space-y-2">
                     <h2 className="text-lg font-bold">Blogs</h2>
-                    <ul className="flex flex-col gap-4">
+                    <ul className="flex flex-col gap-2">
                         <li>
                             <Link href="/">Blog 1</Link>
                         </li>
@@ -45,7 +48,7 @@ export default function Footer() {
                 </div>
                 <div className="space-y-2">
                     <h2 className="text-lg font-bold">Contact Links</h2>
-                    <ul className="flex flex-col gap-4  ">
+                    <ul className="flex flex-col gap-2">
                         <li>
                             <Link href="/">Email: michaeljoshmaranga@gmail.com</Link>
                         </li>
@@ -58,7 +61,7 @@ export default function Footer() {
             <div className="flex justify-between py-5 mx-auto container">
                 <span></span>
                 <p className="text-muted-foreground">© 2026 Michael Josh Maranga. All rights reserved.</p>
-                <ul className="flex gap-4">
+                <ul className="flex gap-4 text-primary">
                     <li>
                         <Link href="/">
                             <Facebook />
