@@ -3,7 +3,7 @@ import { Facebook, Github, Twitter, Instagram } from "lucide-react"
 
 export default function Footer() {
     return (
-        <footer className="bg-muted">
+        <footer className="backdrop-blur-xl rounded-t-xl md:border shadow-lg bg-secondary/50 container mx-auto w-100 md:w-full px-5 py-3">
             <div className="grid grid-cols-2 px-4 md:flex md:justify-between py-5 mx-auto container text-primary gap-8">
                 <div className="space-y-2">
                     <h2 className="text-lg font-bold">Michael Josh Maranga</h2>

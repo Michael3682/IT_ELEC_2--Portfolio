@@ -1,7 +1,9 @@
 import "@/styles/globals.css"
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/provider/theme-provider";
+import ScrollToTop from "@/components/common/ScrollToTop"
+import {ScrollProvider} from "@/components/provider/scroll-provider"
+import { ThemeProvider } from "@/components/provider/theme-provider"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-screen overflow-x-hidden bg-secondary`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-between h-screen overflow-x-hidden bg-secondary`}
       >
         <ThemeProvider
           attribute="class"
@@ -34,7 +36,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <ScrollProvider>
+            <ScrollToTop />
+            {children}
+          </ScrollProvider>
         </ThemeProvider>
       </body>
     </html>

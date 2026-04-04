@@ -1,9 +1,9 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import BlogsCard from "@/components/common/BlogsCard"
+import BlogsDate from "@/components/features/blogs-feat/BlogsDate"
+import BlogsCategory from "@/components/features/blogs-feat/BlogsCategory"
 import { BLOG_POSTS, filterPosts, formatDateLabel } from "@/constants/blog"
-import BlogsCard from "@/components/features/BlogsCard"
-import BlogsCategory from "@/components/features/BlogsCategory"
-import BlogsDate from "@/components/features/BlogsDate"
 
 export default async function BlogDatePage({ params }: { params: Promise<{ date: string[] }> }) {
     const { date } = await params
@@ -17,7 +17,7 @@ export default async function BlogDatePage({ params }: { params: Promise<{ date:
     })
 
     return (
-        <div>
+        <div className="container mx-auto px-5 md:px-0 py-20 mt-5 space-y-10">
             <Link className="inline-flex items-center gap-2 text-sm text-muted-foreground mb-4 hover:underline" href="/blogs">
                 <ArrowLeft className="text-muted-foreground" size={20} />
                 Back to blogs

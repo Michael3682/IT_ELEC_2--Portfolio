@@ -78,6 +78,10 @@
   }
 }
 
+@utility text-outline {
+  -webkit-text-stroke: 1px var(--ring);
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -148,15 +152,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--border);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--muted-foreground);
+  display: none
 }
 
 @layer base {

@@ -1,12 +1,12 @@
-import Techs from "@/components/features/Techs"
-import Experiences from "@/components/features/Experiences"
-import AboutHeroSection from "@/components/features/AboutHeroSection"
+import Techs from "@/components/features/about-feat/Techs"
+import Experiences from "@/components/features/about-feat/Experiences"
+import AboutHeroSection from "@/components/features/about-feat/AboutHeroSection"
 
 export default function About() {
     return (
-        <div className="space-y-20">
+        <div className="container mx-auto px-5 md:px-0 py-20 mt-5 space-y-10">
             <AboutHeroSection />
-            <div className="flex flex-col lg:flex-row gap-7">
+            <div className="flex flex-col md:flex-row gap-7">
                 <Techs />
                 <Experiences />
             </div>

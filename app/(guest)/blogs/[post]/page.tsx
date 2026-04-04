@@ -12,7 +12,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ post:
     }
 
     return (
-        <article>
+        <article className="container mx-auto px-5 md:px-0 py-20 mt-5 space-y-10 h-full">
             <Link className="inline-flex items-center gap-2 text-sm text-muted-foreground mb-4 hover:underline" href="/blogs">
                 <ArrowLeft className="text-muted-foreground" size={20} />
                 Back to blogs
