@@ -1,15 +1,19 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import { BLOG_POSTS, filterPosts } from "@/constants/blog"
+import { BLOG_POSTS, filterPosts, formatDateLabel } from "@/constants/blog"
 import BlogsCard from "@/components/features/BlogsCard"
 import BlogsCategory from "@/components/features/BlogsCategory"
 import BlogsDate from "@/components/features/BlogsDate"
 
-export default async function BlogCategoryPage({ params }: { params: Promise<{ category: string[] }> }) {
-    const { category } = await params
+export default async function BlogDatePage({ params }: { params: Promise<{ date: string[] }> }) {
+    const { date } = await params
+
+    const [year, month, day] = date || []
 
     const filteredPosts = filterPosts(BLOG_POSTS, {
-        category,
+        year,
+        month,
+        day,
     })
 
     return (
@@ -20,14 +24,14 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ c
             </Link>
 
             <div className="mb-4 text-primary">
-                <h2 className="text-3xl font-bold">Category: {category?.join(" / ")}</h2>
-                <p>{filteredPosts.length} {filteredPosts.length > 1 ? "posts" : "post"} in this category</p>
+                <h2 className="text-3xl font-bold">Date: {formatDateLabel(date)}</h2>
+                <p>{filteredPosts.length} {filteredPosts.length > 1 ? "posts" : "post"} found</p>
             </div>
 
             <div className="flex gap-7 mb-4">
-                <BlogsCategory activeCategory={category?.[category.length - 1]} />
+                <BlogsCategory />
                 <span className="border-l border-ring"></span>
-                <BlogsDate />
+                <BlogsDate activeYear={year} activeMonth={month} />
             </div>
 
             <BlogsCard posts={filteredPosts.length > 0 ? filteredPosts : undefined} />

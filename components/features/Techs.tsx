@@ -3,7 +3,7 @@ import { TECHS } from "@/constants/aboutme"
 
 export default function Techs() {
     return (
-        <section className="mt-15 p-10 space-y-7 rounded-md shadow-md border w-max flex-1 bg-muted">
+        <section className="mt-15 p-10 space-y-7 rounded-md shadow-md border w-full bg-muted">
             <h1 className="text-2xl font-medium pb-3 border-b text-primary">
                 Tech Stacks
             </h1>

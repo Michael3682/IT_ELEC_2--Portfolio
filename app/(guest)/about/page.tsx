@@ -6,7 +6,7 @@ export default function About() {
     return (
         <div className="space-y-20">
             <AboutHeroSection />
-            <div className="flex gap-7">
+            <div className="flex flex-col lg:flex-row gap-7">
                 <Techs />
                 <Experiences />
             </div>

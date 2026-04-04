@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: Readonly<React.ReactNod
     return (
         <>
             <Header />
-            <main className="flex-1 container mx-auto my-6 py-30">
+            <main className="flex-1 container mx-auto my-6 py-30 px-4">
                 {children}
             </main>
             <Footer />
