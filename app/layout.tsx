@@ -1,7 +1,6 @@
 import "@/styles/globals.css"
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import ScrollToTop from "@/components/common/ScrollToTop"
 import {ScrollProvider} from "@/components/provider/scroll-provider"
 import { ThemeProvider } from "@/components/provider/theme-provider"
 
@@ -37,7 +36,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ScrollProvider>
-            <ScrollToTop />
             {children}
           </ScrollProvider>
         </ThemeProvider>

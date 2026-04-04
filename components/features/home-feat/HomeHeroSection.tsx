@@ -3,7 +3,6 @@
 import gsap from "gsap"
 import { useEffect, useRef } from "react"
 import ScrollTrigger from "gsap/ScrollTrigger"
-import LineWaves from "@/components/ui/LineWaves"
 import TiltedCard from "@/components/ui/TiltedCard"
 
 gsap.registerPlugin(ScrollTrigger)
